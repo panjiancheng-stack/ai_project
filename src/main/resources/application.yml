@@ -1,6 +1,13 @@
 spring:
   application:
     name: ai_project
+  datasource:
+    url: jdbc:mysql://localhost:3306/ai_project?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&allowMultiQueries=true&allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  profiles:
+    active: local
 server:
   port: 8123
   servlet:
@@ -15,3 +22,4 @@ knife4j:
   enable: true
   setting:
     language: zh_cn
+
